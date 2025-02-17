@@ -63,7 +63,6 @@ export default function Path() {
 
   return (
     <View className="flex-1 bg-gray-900">
-      {/* Navbar */}
       <View className="flex-row gap-4 justify-between items-center px-10 py-4 bg-gray-800">
         <TouchableOpacity onPress={handleGoBack}>
           <Text className="text-white font-bold">Go Back</Text>
@@ -73,7 +72,6 @@ export default function Path() {
         </TouchableOpacity>
       </View>
 
-      {/* Grid of Commands */}
       <View className="flex-1 p-4">
         <FlatList
           data={moves}
@@ -82,15 +80,14 @@ export default function Path() {
           numColumns={3}
           columnWrapperStyle={{
             justifyContent: "space-between",
-            gap: 16, // Adds gap between columns (horizontal gap)
+            gap: 16,
           }}
           contentContainerStyle={{
-            paddingBottom: 16, // Adds gap between rows (vertical gap)
+            paddingBottom: 16,
           }}
         />
       </View>
 
-      {/* Add Command Button */}
       <View className="p-4">
         <Button title="Add Command" onPress={addMove} />
       </View>

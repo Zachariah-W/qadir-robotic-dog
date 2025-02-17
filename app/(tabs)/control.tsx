@@ -34,7 +34,6 @@ export default function ControlPage() {
 
   return (
     <View className="flex-col gap-3 bg-gray-900 items-center ">
-      {/* Navbar */}
       <View className="flex-row justify-between items-center p-4 bg-gray-800 px-16 w-full">
         <TouchableOpacity onPress={handleGoBack}>
           <Text className="text-white font-bold">Go Back</Text>
@@ -48,7 +47,6 @@ export default function ControlPage() {
 
       <View className="bg-gray-800 p-4 rounded-tl-xl rounded-tr-xl w-full">
         <View className="flex-row justify-between items-center">
-          {/* Left Arrow and Right Arrow Buttons */}
           <View className="flex-row gap-4">
             <TouchableOpacity>
               <Text className="text-white text-xl">←</Text>
@@ -58,7 +56,6 @@ export default function ControlPage() {
             </TouchableOpacity>
           </View>
 
-          {/* Speed Control */}
           <View className="flex-row items-center gap-4">
             <TouchableOpacity
               className="bg-orange-600 py-2 px-4 rounded-md"
@@ -68,7 +65,6 @@ export default function ControlPage() {
             </TouchableOpacity>
           </View>
 
-          {/* Standup / Sitdown Button */}
           <TouchableOpacity
             className="bg-orange-600 py-2 px-4 rounded-md"
             onPress={handleStandupSitdown}
@@ -78,7 +74,6 @@ export default function ControlPage() {
             </Text>
           </TouchableOpacity>
 
-          {/* Start/Stop Recording Button */}
           <TouchableOpacity
             className="bg-orange-600 py-2 px-4 rounded-md"
             onPress={handleStartStopRecording}
@@ -88,7 +83,6 @@ export default function ControlPage() {
             </Text>
           </TouchableOpacity>
 
-          {/* Start/Stop Collection Path Button */}
           <TouchableOpacity
             className="bg-orange-600 py-2 px-4 rounded-md"
             onPress={handleStartStopCollectionPath}

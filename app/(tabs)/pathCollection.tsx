@@ -2,7 +2,6 @@ import { View, Text, TouchableOpacity, FlatList, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 
-// Define a type for the path
 interface Path {
   id: string;
   name: string;
@@ -25,17 +24,13 @@ export default function PathCollection() {
     navigation.navigate("home");
   };
 
-  // Handle clicking on a path
   const handlePathClick = (id: string) => {
-    // Navigate to the path details page or perform some action with the path
     console.log(`Clicked on path with ID: ${id}`);
-    // You can add navigation logic here if needed
   };
 
-  // Render each item (path)
   const renderItem = ({ item }: { item: Path }) => (
     <TouchableOpacity
-      className="bg-gray-800 p-4 rounded-md mb-4 w-1/3" // Adjust width here to make paths wider
+      className="bg-gray-800 p-4 rounded-md mb-4 w-1/3"
       onPress={() => handlePathClick(item.id)}
     >
       <Text className="text-white text-lg font-semibold">{item.name}</Text>
@@ -43,7 +38,6 @@ export default function PathCollection() {
     </TouchableOpacity>
   );
 
-  // Function to add a new path
   const addPath = () => {
     const newPath: Path = {
       id: (paths.length + 1).toString(),
@@ -55,7 +49,6 @@ export default function PathCollection() {
 
   return (
     <View className="flex-1 bg-gray-900">
-      {/* Navbar */}
       <View className="flex-row gap-4 justify-between items-center px-10 py-4 bg-gray-800">
         <TouchableOpacity onPress={handleGoBack}>
           <Text className="text-white font-bold">Go Back</Text>
@@ -65,7 +58,6 @@ export default function PathCollection() {
         </TouchableOpacity>
       </View>
 
-      {/* Grid of Paths */}
       <View className="flex-1 p-4">
         <FlatList
           data={paths}
@@ -74,15 +66,14 @@ export default function PathCollection() {
           numColumns={3}
           columnWrapperStyle={{
             justifyContent: "space-between",
-            gap: 16, // Adds gap between columns (horizontal gap)
+            gap: 16,
           }}
           contentContainerStyle={{
-            paddingBottom: 16, // Adds gap between rows (vertical gap)
+            paddingBottom: 16,
           }}
         />
       </View>
 
-      {/* Add Path Button */}
       <View className="p-4">
         <Button title="Add Path" onPress={addPath} />
       </View>

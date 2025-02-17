@@ -5,13 +5,11 @@ export default function Home() {
   const navigation = useNavigation();
   return (
     <View className="flex-1 bg-gray-900 justify-center items-center pr-24 pl-20 py-48">
-      {/* Row Container */}
       <View className="flex-row space-x-4 w-full h-screen gap-5">
-        {/* Control Block (Placeholder) */}
         <TouchableOpacity
           className="bg-blue-600 p-6 rounded-lg shadow-lg active:bg-blue-700 flex-col w-1/3 justify-center"
           onPress={() => {
-            navigation.navigate("control");
+            navigation.navigate("Control");
           }}
         >
           <Text className="text-white text-xl font-bold text-center">
@@ -19,7 +17,6 @@ export default function Home() {
           </Text>
         </TouchableOpacity>
 
-        {/* Video Collection Block */}
         <TouchableOpacity
           className="bg-green-600 p-6 rounded-lg shadow-lg active:bg-green-700 flex-col w-1/3 justify-center"
           onPress={() => {
@@ -31,7 +28,6 @@ export default function Home() {
           </Text>
         </TouchableOpacity>
 
-        {/* Path Collection Block */}
         <TouchableOpacity
           className="bg-orange-600 p-6 rounded-lg shadow-lg active:bg-orange-700 flex-col w-1/3 justify-center"
           onPress={() => navigation.navigate("pathCollection")}
